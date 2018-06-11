@@ -1,0 +1,114 @@
+.product_list
+  .container
+    padding: 0
+    .product_list__item 
+      margin-bottom: 50px
+      &:hover
+        .product_list__box
+          background: #f6f6f6
+          .hover_btn
+            visibility: visible
+            opacity: 1
+          .line
+            opacity: 0  
+          .product_list__btn
+            background: $red
+            i
+              color: $white  
+      .product_list__box
+        width: 100%
+        height: 375px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        border: 1px solid #eeeeee
+        padding: 25px 0 0 0
+        position: relative
+        transition: all 0.5s ease
+        .product_list__img
+          min-height: 195px
+        .hover_btn
+          width: 100%
+          height: 235px
+          background: rgba(0,0,0,0.8)
+          z-index: 2
+          position: absolute
+          top: 0px
+          left: 0
+          visibility: hidden
+          opacity: 0
+          transition: all 0.5s ease
+          .btn_delete
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 170px
+            height: 40px
+            border-right: 2px solid $white
+            border-left: 2px solid $white
+            position: absolute
+            top: calc(50% - 20px)
+            left: calc(50% - 85px)
+            color: $white
+            text-transform: uppercase
+            font-size: 12px
+            font-weight: normal
+            &:hover
+              &:after
+                width: 50%
+              &:before
+                width: 50%  
+            &:after
+              @include pseudo
+              width: 100%
+              height: 2px
+              top: 0
+              left: 0
+              background: $white
+              transition: all 0.5s ease
+            &:before
+              @include pseudo
+              width: 100%
+              height: 2px
+              bottom: 0
+              right: 0
+              background: $white  
+              transition: all 0.5s ease
+              
+
+        .line
+          display: block
+          width: 10px
+          height: 2px
+          background: $red
+        .product_list__title
+          font-size: 14px
+          font-weight: 600
+          text-transform: uppercase
+          color: $bold_color_text
+          text-align: center
+        .product_list__price
+          font-size: 16px
+          color: $red
+          margin-top: -5px
+          font-weight: 600
+        .product_list__btns
+          display: flex
+          flex-direction: row
+          justify-content: center
+          align-items: center
+          .product_list__btn
+            width: 40px
+            height: 40px
+            border: 1px solid #eeeeee
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            border-bottom: none
+            cursor: pointer
+            transition: all 0.5s ease
+            &:nth-child(1)
+              border-right: none    

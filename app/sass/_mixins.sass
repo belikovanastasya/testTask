@@ -1,0 +1,24 @@
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes    #{$name}
+		@content
+	@-ms-keyframes     #{$name}
+		@content
+	@keyframes         #{$name}
+		@content
+
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+		content:  $content;
+		display:  $display;
+		position: $pos;
+
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+
+=rmin($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
